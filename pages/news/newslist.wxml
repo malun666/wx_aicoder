@@ -1,0 +1,21 @@
+<!--pages/news/newslist.wxml-->
+<view class="news">
+  <view class='news-title'>
+    <text class="title">AICODER分享列表</text>
+  </view>
+  <scroll-view class='news-list' scroll-y="true" enable-back-to-top="true" bindscrolltolower="scrollLower">
+    <view wx:for="{{newsList}}" wx:key="_id">
+       <navigator
+          url="../shownews/show?id={{item._id}}"
+          hover-class="navigator-hover"
+        >
+         <icon type="info" size="20" />
+        {{item.Title}}
+        </navigator>
+    </view>
+  </scroll-view>
+
+  <view class="back">
+    <navigator url="../index/index">回到首页</navigator>
+  </view>
+</view>

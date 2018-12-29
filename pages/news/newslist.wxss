@@ -1,0 +1,35 @@
+@import '../shownews/show.wxss';
+
+/* pages/news/newslist.wxss */
+.news-title {
+  text-align: center;
+}
+.news-title .title {
+  font-size: 38rpx;
+}
+
+.news-list {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: left;
+  line-height: 2;
+  padding: 10rpx 40rpx;
+  background-color: #f0f0f0;
+  border: 1px solid #c0c0c0;
+  border-radius: 10rpx;
+  width: 650rpx;
+  margin: 50rpx auto;
+  min-height: 800rpx;
+}
+
+.news-item {
+  flex: 0 0 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+}
+
+.navigator-hover {
+  background-color: #c8c8c8;
+}

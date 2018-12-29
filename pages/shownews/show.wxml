@@ -1,0 +1,13 @@
+<!--pages/shownews/show.wxml-->
+<!-- <text>pages/shownews/show.wxml</text> -->
+<view class="news-detial">
+  <view class='news-title'>
+    <text>{{article.Title}}</text>
+  </view>
+  <view class="content">
+    <text>{{article.Content}}</text>
+  </view>
+  <view class="back">
+    <navigator url="../news/newslist">后退</navigator>
+  </view>
+</view>
