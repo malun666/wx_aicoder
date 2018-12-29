@@ -6,7 +6,7 @@ Page({
    */
   data: {
     newsListUrl: 'https://hamkd.com/api/newslist',
-    cur: 1,
+    cur: 0,
     newsList: [],
     total: 0
   },
@@ -53,14 +53,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    this.loadNewData();
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this.loadNewData();
   },
 
   /**
@@ -75,21 +75,24 @@ Page({
       title: '正在加载后台数据中.....',
     })
     wx.request({
-      url: this.data.newsListUrl,
+      url: this.data.newsListUrl + '?page='+ (that.data.cur + 1),
       method: 'GET',
       success: function (res) {
-        // that.setData({
-        //   cur: res.data.data.cur,
-        //   newsList: res.data.data.newsList,
-        //   total: res.data.data.total
-        // });
-        that.setData(res.data.data);
-        wx.setStorage({
-          key: 'newsList',
-          data: res.data.data.newsList,
-        });
+        if(res.data.data.newsList.length > 0) {
+          that.setData({cur: that.cur + 1});
+          let newsList = [...that.data.newsList, ...res.data.data.newsList];
+          let newData = Object.assign({}, res.data.data, { newsList: newsList});
+          that.setData(newData);
+          wx.setStorage({
+            key: 'newsList',
+            data: newsList,
+          });
+        }
         wx.hideLoading();
       }
     })
+  },
+  saveNewsList: function(newsList) {
+
   }
 })

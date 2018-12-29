@@ -1,0 +1,15 @@
+<view class="bm">
+  <view class="xm">
+    <label>请输入姓名：
+      <input type="text" maxlength="12" bindinput="name" placeholder="姓名">{{name}}</input>
+    </label>
+  </view>
+  <view class="phone">
+    <label>请输入电话：
+      <input type="number" bindinput="phone" maxlength="12" placeholder="电话">{{phone}}</input>
+    </label>
+  </view>
+  <view class="sub">
+    <button type='primary' bindtap='sub'>提交</button>
+  </view>
+</view>

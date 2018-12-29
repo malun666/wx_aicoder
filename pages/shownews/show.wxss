@@ -1,3 +1,4 @@
+@import '/utils/wxparse/wxParse.wxss';
 /* pages/shownews/show.wxss */
 
 .back {
@@ -5,7 +6,7 @@
   height: 80rpx;
   line-height: 80rpx;
   border-radius: 40rpx;
-  width: 200rpx;
+  width: 400rpx;
   margin: 0 auto;
   text-align: center;
   background-color: #80c93a;
@@ -13,10 +14,16 @@
 }
 
 .news-title {
-  font-size: 40rpx;
+  /* font-size: 40rpx; */
   border-bottom:  1rpx solid #ccc;
   font-weight: bolder;
-  padding: 40rpx;
+  padding: 30rpx;
+  font-size: 50rpx;
+}
+.sub-title {
+  font-weight: normal;
+  color: #ccc;
+  font-size: 30rpx;
 }
 
 .news-detial {

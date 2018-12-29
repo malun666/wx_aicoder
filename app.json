@@ -3,12 +3,38 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/news/newslist",
-    "pages/shownews/show"
+    "pages/shownews/show",
+    "pages/bm/bm"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "AICODER程序员",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#89c003",
+    "selectedColor": "#f50f0f",
+    "backgroundColor": "#f0f0f0",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "imgs/home.png",
+        "selectedIconPath": "imgs/home.png"
+      },
+      {
+        "pagePath": "pages/news/newslist",
+        "text": "分享",
+        "iconPath": "imgs/fx.png",
+        "selectedIconPath": "imgs/fx.png"
+      },
+      {
+        "pagePath": "pages/bm/bm",
+        "text": "报名",
+        "iconPath": "imgs/user.png",
+        "selectedIconPath": "imgs/user.png"
+      }
+    ]
   }
 }

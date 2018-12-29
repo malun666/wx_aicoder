@@ -1,0 +1,15 @@
+/* pages/bm/bm.wxss */
+.bm {
+  padding: 30rpx;
+}
+.input-placeholder {
+  color: #ccc;
+}
+input {
+  border: 1rpx solid #ccc;
+  padding: 10rpx;
+  border-radius: 10rpx;
+}
+.sub, .phone, .name {
+  padding: 30rpx 0;
+}

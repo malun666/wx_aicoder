@@ -14,8 +14,9 @@
         </navigator>
     </view>
   </scroll-view>
-
+<!-- 
   <view class="back">
-    <navigator url="../index/index">回到首页</navigator>
-  </view>
+     <navigator open-type="switchTab" url="/pages/index/index">回到首页</navigator> 
+  </view> -->
+    <button type="primary" bindtap='loadNewData'>加载更多...</button>
 </view>

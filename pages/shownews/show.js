@@ -1,3 +1,5 @@
+import wxParse from '../../utils/wxparse/wxParse.js';
+
 // pages/shownews/show.js
 Page({
 
@@ -5,7 +7,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    article: {}
+    article: {},
+    Title: "",
+    SubName: "",
+    SubOn: "",
+    Opend: ""
   },
 
   /**
@@ -20,8 +26,18 @@ Page({
         // console.log(res.data);
         res.data.forEach(function(item, index) {
           if(item._id === query.id) {
-            item.Content = that.deleteTag(item.Content);
-            that.setData({article: item});
+            // item.Content = that.deleteTag(item.Content);
+            that.setData({ 
+              Title: item.Title,
+              SubName: item.SubName,
+              SubOn: item.SubOn,
+              Opend: item.Opend
+            });
+            // console.log(item);
+            item.Content = item.Content.replace(/src=\"\/public/gi, 'src="https://www.hamkd.com/public');
+            console.log(item.Content);
+            item.Content = item.Content.replace(/<img.+?\/qrcode.+?>/gi, '');
+            wxParse.wxParse('article', 'html', item.Content, that, 5);
           }
         });
       },

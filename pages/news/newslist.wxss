@@ -33,3 +33,8 @@
 .navigator-hover {
   background-color: #c8c8c8;
 }
+
+button {
+  width: 50%;
+  margin-bottom: 20rpm;
+}

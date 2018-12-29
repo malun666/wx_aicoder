@@ -10,8 +10,11 @@
   <view class="btn-list">
     <button bindtap="showLaomaCode" type='primary'>AICODER微信</button>
     <button bindtap='gotoNewslist' type='warn'>AICODER分享</button>
-    <button bindtap='gotoNewslist' type='primary'>AICODER报名</button>
-    <button bindtap='gotoNewslist' type='warn'>加入AICODER</button>
+    <button bindtap='bm' type='primary'>AICODER报名</button>
+    <button bindtap='join' type='warn'>加入AICODER</button>
     <!-- <button type='primary' bindtap='gotoAicoder'>AICODER官网</button> -->
+  </view>
+  <view>
+    
   </view>
 </view>

@@ -2,12 +2,17 @@
 <!-- <text>pages/shownews/show.wxml</text> -->
 <view class="news-detial">
   <view class='news-title'>
-    <text>{{article.Title}}</text>
+    <text>{{Title}}</text>
+    <text class="sub-title">
+      作者： {{SubName}}   阅读{{Opend}}次
+    </text>
   </view>
   <view class="content">
-    <text>{{article.Content}}</text>
+    <!-- <text>{{article.Content}}</text> -->
+    <import src="/utils/wxparse/wxParse.wxml"/>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
   </view>
   <view class="back">
-    <navigator url="../news/newslist">后退</navigator>
+    <navigator open-type="navigateBack" url="/page/news/newslist">回到列表页面</navigator>
   </view>
 </view>
